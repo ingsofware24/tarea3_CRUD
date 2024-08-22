@@ -19,7 +19,7 @@ class LoginController
         isAuth();
         $_SESSION = [];
         session_destroy();
-        header('Location: /login_test/');
+        header('Location: /tarea3_CRUD/');
     }
 
     public static function registro(Router $router)
@@ -30,8 +30,8 @@ class LoginController
     }
     public static function menu(Router $router)
     {
-        isAuth();
-        hasPermission(['TIENDA_ADMIN', 'TIENDA_USER']);
+        // isAuth();
+        // hasPermission(['TIENDA_ADMIN', 'TIENDA_USER']);
         $router->render('pages/menu', [], 'layouts/menu');
     }
 
